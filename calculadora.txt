@@ -1,0 +1,15 @@
+fun calculadora(a: Int, b: Int, operacion: Char): String = when (operacion) {
+    '+' -> "La suma es: ${a + b}"
+    '-' -> "La resta es: ${a - b}"
+    '*' -> "La multiplicación es: ${a * b}"
+    '/' -> if (b != 0) "La división es: ${a / b}" else "Error: División por cero"
+    else -> "Operación no válida"
+}
+
+fun main() {
+    println(calculadora(1, 1, '+'))
+    println(calculadora(6, 5, '-'))
+    println(calculadora(5, 5, '*'))
+    println(calculadora(5, 5, '/'))
+}
+
