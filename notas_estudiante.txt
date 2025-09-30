@@ -1,0 +1,21 @@
+fun main() {
+    // Arreglo definido
+    val notas = arrayOf(6, 8, 10, 7, 9)
+
+    // Arreglo nulos
+    val notasNull: Array<Int?> = arrayOfNulls(5)
+
+    var suma = 0
+
+    for (i in notas.indices) {
+        if (i == 0) {
+            notasNull[i] = 2
+        }
+
+        println("Las notas del estudiante número: $i, son, nota = ${notas[i]}")
+        suma += notas[i]
+    }
+
+    val promedio = suma.toDouble() / notas.size
+    println("El promedio de las notas es: $promedio")
+}
