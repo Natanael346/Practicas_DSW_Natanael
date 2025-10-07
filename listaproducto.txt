@@ -1,0 +1,24 @@
+data class Producto(
+val nombre: String,
+val precio: Int,
+val Marca: String,
+val estado: String,
+val promocion: String?
+)
+
+fun main(){
+
+    val listProducto = listOf(
+    Producto("Computadora",800,"HP", "disponible",""),
+    Producto("Telefono",500,"Redmi", "disponible",null),
+    Producto("Computadora",1500,"Mac", "no disponible","")
+    )
+println(listProducto)
+val ageAverage = (
+    listProducto[0].precio +
+    listProducto[1].precio +
+    listProducto[2].precio
+) / 3
+    println(ageAverage)
+    
+}
